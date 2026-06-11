@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <link href="{% static 'css/portfolio.css' %}" rel="stylesheet">
+        <title>João Guilherme Felizardo de Souza - Engenheiro de Software</title>
+    </head>
+    <body>
+    <header>
+      <div class="wrapper">
+          <h1 class="title">João Guilherme Felizardo de Souza - Engenheiro de Software</h1>
+          <div class="grid">
+          <img class="imgProfile" src="{% static 'WhatsApp_Image_2025-11-10_at_06.39.33.jpeg' %}" alt="My image">
+          <div class="rolloutCarousel">
+            <div class="group">
+             <img class="rolloutImg" src="{% static 'postgresqlogo1.png' %}">
+             <img class="rolloutImg" src="{% static 'pythonlogo.png' %}">
+             <img class="rolloutImg" src="{% static 'djangologo.webp' %}">
+             <img class="rolloutImg" src="{% static 'seleniumlogo.png' %}">
+             <img class="rolloutImg" src="{% static 'Microsoft_Power_Automate.svg.png' %}">
+            </div>
+            <div aria-hidden class="group">
+             <img class="rolloutImg" src="{% static 'postgresqlogo1.png' %}">
+             <img class="rolloutImg" src="{% static 'pythonlogo.png' %}">
+             <img class="rolloutImg" src="{% static 'djangologo.webp' %}">
+             <img class="rolloutImg" src="{% static 'seleniumlogo.png' %}">
+             <img class="rolloutImg" src="{% static 'Microsoft_Power_Automate.svg.png' %}">
+            </div>
+          </div>
+          </div>
+    </div>
+  </div>
+  </div>
+         <ul>
+            <li><a onclick="location.href='{% url 'post_list' %}'">Projetos</a></li>
+            <li><a onclick="location.href='{% url 'sobreMim' %}'">Sobre Mim</a></li>
+            <li><a onclick="location.href='{% url 'habilidades' %}'">Habilidades</a></li>
+            <li><a onclick="location.href='{% url 'contato' %}'">Contato</a></li>
+         </ul>
+</header>
+<div>
+</div>
+    <main>
+        <div class="displayMenuBody">
+            {% block content %}
+            {% endblock %}  
+        </div>
+    </main>
+
+<footer>
+  <p>Made with Django</p>
+</footer>       
+</body>
+</html>
