@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Post,PostImage
-
+from django.shortcuts import get_object_or_404
 
 
 def post_list(request):

@@ -107,7 +107,7 @@ USE_TZ = True
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'media'
-STATIC_URL = 'core/static/'
+STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     "./uploads/media/project_images/",
